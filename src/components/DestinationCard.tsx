@@ -2,16 +2,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface DestinationCardProps {
   image: string;
   title: string;
   location: string;
   description: string;
+  id: string;
 }
 
-const DestinationCard = ({ image, title, location, description }: DestinationCardProps) => {
+const DestinationCard = ({ image, title, location, description, id }: DestinationCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -35,6 +38,7 @@ const DestinationCard = ({ image, title, location, description }: DestinationCar
         <p className="mt-2 text-gray-600">{description}</p>
         <Button 
           className="mt-4 w-full rounded-lg bg-black text-white hover:bg-black/90"
+          onClick={() => navigate(`/destination/${id}`)}
         >
           Explore Now
         </Button>

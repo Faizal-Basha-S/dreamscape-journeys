@@ -3,18 +3,21 @@ import DestinationCard from "./DestinationCard";
 
 const destinations = [
   {
+    id: "swiss-alps",
     image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
     title: "Swiss Alps",
     location: "Switzerland",
     description: "Experience the majestic beauty of the Swiss Alps with breathtaking views and adventures.",
   },
   {
+    id: "tropical-paradise",
     image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
     title: "Tropical Paradise",
     location: "Maldives",
     description: "Escape to crystal clear waters and white sandy beaches in this tropical paradise.",
   },
   {
+    id: "mountain-retreat",
     image: "https://images.unsplash.com/photo-1458668383970-8ddd3927deed",
     title: "Mountain Retreat",
     location: "Canada",
@@ -33,8 +36,8 @@ const FeaturedDestinations = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((destination, index) => (
-            <DestinationCard key={index} {...destination} />
+          {destinations.map((destination) => (
+            <DestinationCard key={destination.id} {...destination} />
           ))}
         </div>
       </div>
