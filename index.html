@@ -1,18 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dreamscape-journeys</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamscape Journeys</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/lucide-css" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle fade-down">DISCOVER THE WORLD</p>
+            <h1 class="hero-title fade-up">Your Journey Begins Here</h1>
+            <p class="hero-description fade-up">Experience unforgettable destinations with our curated travel experiences</p>
+            <button class="button button-primary fade-up" onclick="scrollToDestinations()">
+                Start Exploring
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Featured Destinations -->
+    <section id="featured-destinations" class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Destinations</h2>
+                <p>Discover our hand-picked selection of extraordinary destinations</p>
+            </div>
+            <div class="destinations-grid">
+                <!-- Destinations will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive travel insights and special offers</p>
+                <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Details Modal -->
+    <div id="destination-modal" class="modal">
+        <div class="modal-content">
+            <!-- Modal content will be inserted by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
